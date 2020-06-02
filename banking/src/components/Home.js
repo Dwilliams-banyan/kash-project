@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './components/Header'
-import NavbarPage from './components/OurNavBar'
-import Balance from "./components/OurBalance"
-import Transactions from './components/Transactions';
+import Header from './Header'
+import NavbarPage from './OurNavBar'
+import Balance from "./OurBalance"
+import Transactions from './Transactions';
 
 function Home() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { MDBJumbotron, MDBContainer } from "mdbreact";
 import ButtonPage from './OurButtons'
 
-const JumbotronPage = () => {
+const Header = () => {
   return (
     <MDBJumbotron fluid className="purple-gradient">
       <MDBContainer className="text-center">
@@ -14,4 +14,4 @@ const JumbotronPage = () => {
   )
 }
 
-export default JumbotronPage;
+export default Header;
