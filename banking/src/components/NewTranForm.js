@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import {MDBBtn} from "mdbreact"
-//import '../styles/dropdown.css'
+import '../styles/dropdown.css'
 
-class NewTransaction extends React.Component{
+class NewTranForm extends React.Component{
     
     render(){
         return(
@@ -22,7 +22,8 @@ class NewTransaction extends React.Component{
                     </div>
 
                     <div className="text-center">
-                        <select className="w-25 browser-default custom-select">
+                        <div><label>Enter the type of transaction :</label></div>
+                        <select className="bdb-select w-25 browser-default custom-select">
                         {/* <option disabled value="">Type Of Transaction</option> */}
                             <option value="deposit">Deposit</option>
                             <option value="withdraw">Withdrawer</option>
@@ -38,4 +39,4 @@ class NewTransaction extends React.Component{
     }
 }
 
-export default NewTransaction
+export default NewTranForm

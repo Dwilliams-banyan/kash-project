@@ -5,10 +5,10 @@ export default (state=initState,action)=>{
         case "ADD_TRANSACTION":
             return [...state, action.transaction]
         case "DEL_TRANSACTION":
-            return state.filter(item=> item.id != action.id)
+            return state.filter(item=> item.id !== action.id)
         case "EDIT_TRANSACTION":
             return state.map(item =>{
-                if(item.id == action.id ){
+                if(item.id === action.id ){
                     return {...item, memo:action.memo}
                 }
                 return item
