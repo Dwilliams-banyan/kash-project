@@ -3,18 +3,37 @@ import {MDBBtn} from "mdbreact"
 import '../styles/dropdown.css'
 
 class NewTranForm extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+        amount: 0,
+        balance: 0 
+    };
     
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+    handleChange=(event)=>{
+        this.setState({
+            amount: event.target.value
+        });
+//     handleSubmit=(event)=>{
+//         this.setState({
+//            balance: this.state.amount + this.state.balance
+//         });
+//     }
+//    }
     render(){
         return(
             <div>
                 <Fragment>
                     <div className="form-group text-center">
                         <label htmlFor="example1">Amount :</label>
-                        <input type="text" placeholder="The amount" id="example1" className="mx-auto form-control form-control-lg w-25" />
+                        <input name='amount' type="number" value={this.state.amount}  className="mx-auto form-control form-control-lg w-25" onChange={this.handleChange} />
                     </div>
                     <div className="form-group text-center">
                         <label htmlFor="example2">Payable To :</label>
-                        <input type="number" placeholder="payment" id="example2" className="mx-auto form-control form-control-lg w-50" />
+                        <input type="text" placeholder="payment" id="example2" className="mx-auto form-control form-control-lg w-50" />
                     </div>
                     <div className="form-group text-center">
                         <label htmlFor="example3">Memo</label>
