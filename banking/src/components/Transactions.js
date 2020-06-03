@@ -1,15 +1,20 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { connect } from "react-redux";
+import TransactionsItem from "./TransactionItem"
+import TranactionItem from "./TransactionItem";
 
 
-
-const Transactions = () => {
+const Transactions = (props) => {
   return (
       <div className="container-fluid">
+        {console.log(props)}
     <MDBContainer className="purple lighten-5 ">
       <MDBRow >
         <MDBCol size="12">
-          .col-9
+          {props.transaction.map(item =>(
+            <TranactionItem  key={item.id} {...item}/>
+          ))}
         </MDBCol>
       </MDBRow>
     </MDBContainer>
@@ -17,4 +22,8 @@ const Transactions = () => {
   );
 }
 
-export default Transactions;
+const mapStateToProps=(state)=>({
+    transaction: state.transaction
+})
+
+export default connect(mapStateToProps)(Transactions);

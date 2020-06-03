@@ -1,5 +1,4 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from 'mdbreact';
 import '../styles/dropdown.css'
 
 

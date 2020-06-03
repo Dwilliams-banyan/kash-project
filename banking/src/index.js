@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'
 import myStore from './store/configStore'
 //import Home from './components/Home';
 import * as serviceWorker from './serviceWorker';
@@ -10,13 +11,19 @@ import {addTransaction} from './action/transactionAction'
 import {addBalance} from './action/balanceAction'
 
 const store = myStore()
-console.log(store.getState())
 
-let tests= store.dispatch(addBalance(45))
-let test=store.dispatch(addTransaction({amount:20,to:"Rose",memo:"For Great Teaching",transactionType:"transfer"}))
-console.log(test)
-console.log(tests)
-ReactDOM.render(<AppRouter />, 
+store.subscribe(()=> console.log(store.getState()))
+
+store.dispatch(addBalance(45))
+store.dispatch(addTransaction({amount:20,to:"Rose",memo:"For Great Teaching",transactionType:"transfer"}))
+
+const JSX = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+)
+
+ReactDOM.render(JSX, 
   document.getElementById('root')
 );
 
