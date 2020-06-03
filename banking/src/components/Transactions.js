@@ -4,19 +4,17 @@ import { connect } from "react-redux";
 import TranactionItem from "./TransactionItem";
 
 
+
 const Transactions = (props) => {
   return (
       <div className="container-fluid">
-        {console.log(props)}
-    <MDBContainer className="purple lighten-5 ">
+    <MDBContainer>
       <MDBRow >
-        <MDBCol size="12">
-          <div  className="mt-4">
+          <MDBCol size="12">
             {props.transaction.map(item =>(
-              <TranactionItem key={item.id} {...item}/>
+              <TranactionItem  key={item.id} {...item}/>
               ))}
-          </div>
-        </MDBCol>
+          </MDBCol>
       </MDBRow>
     </MDBContainer>
     </div>
