@@ -2,7 +2,7 @@ import React from "react"
 import {Link} from 'react-router-dom'
 
 const TranactionItem=(props)=>(
-    <div>
+    <div  className="mt-5">
         <h2>Amount : {props.amount}</h2>
         <h2>To : {props.to}</h2>
         <h2>Memo : {props.memo}</h2>
