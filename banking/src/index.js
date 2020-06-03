@@ -1,20 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import myStore from './store/configStore'
-import Home from './components/Home';
+//import Home from './components/Home';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap-css-only/css/bootstrap.min.css'
 import "mdbreact/dist/css/mdb.css";
+import AppRouter from './router/appRouter';
 
 
 const store = myStore()
 console.log(store.getState())
 
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
+ReactDOM.render(<AppRouter />, 
   document.getElementById('root')
 );
 

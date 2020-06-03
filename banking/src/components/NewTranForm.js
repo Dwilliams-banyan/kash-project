@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import Header from './Header'
 import {MDBBtn} from "mdbreact"
 //import '../styles/dropdown.css'
 
@@ -8,7 +7,6 @@ class NewTransaction extends React.Component{
     render(){
         return(
             <div>
-                <Header />
                 <Fragment>
                     <div className="form-group text-center">
                         <label htmlFor="example1">Amount :</label>
