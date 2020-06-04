@@ -15,29 +15,38 @@ render() {
   return (
 
       <MDBNavbar color="default-color" dark expand="md">
+
         <MDBNavbarBrand>
           <strong className="white-text">Kash App</strong>
         </MDBNavbarBrand>
+
         <MDBNavbarToggler onClick={this.toggleCollapse} />
+
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav>
+
             <MDBNavItem active>
               <MDBNavLink to="/">Home</MDBNavLink>
             </MDBNavItem>
+
             <MDBNavItem>
-              <MDBNavLink to="/NewTranForm">New Transaction</MDBNavLink>
+              <MDBNavLink to="/new">New Transaction</MDBNavLink>
             </MDBNavItem>
+
             <MDBNavItem>
-              <MDBNavLink to="/AboutPage">About Us</MDBNavLink>
+              <MDBNavLink to="/aboutus">About Us</MDBNavLink>
             </MDBNavItem>
 
           </MDBNavbarNav>
+
           <MDBNavbarNav right>
+
             <MDBNavItem>
               <MDBNavLink className="waves-effect waves-light" to="#!">
                 <MDBIcon fab icon="twitter" />
               </MDBNavLink>
             </MDBNavItem>
+            
             <MDBNavItem>
               <MDBNavLink className="waves-effect waves-light" to="#!">
                 <MDBIcon fab icon="google-plus-g" />

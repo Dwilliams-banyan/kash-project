@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const TranactionItem=(props)=>(
     <div>
-        <Link to={`/EditPage/${props.id}`}>
+        <Link to={`/edit/${props.id}`}>
             <div  className="purple lighten-5 mt-5">
                 <h2 className="text-dark">Amount : {props.amount}</h2>
                 <h2 className="text-dark">To : {props.to}</h2>

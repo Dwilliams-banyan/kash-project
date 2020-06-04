@@ -1,7 +1,8 @@
+import {v4 as uuidv4} from 'uuid'
 export const addTransaction=({amount=0, to, transactionType, memo=""}) =>({
     type : "ADD_TRANSACTION",
     transaction : {
-        id:Math.random(),
+        id:uuidv4(),
         memo,
         to,
         transactionType,
