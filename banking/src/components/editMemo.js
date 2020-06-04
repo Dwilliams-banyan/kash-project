@@ -25,25 +25,39 @@ const EditPage = ({transaction,history,editMemo}) => {
           <div className='mx-auto' style={{width: '40%'}}>
              <h1 className='text-center  purple darken-2 mr-5' >Edit Memo</h1>
           </div>
+
           <h2 className='text-center  '>Amount: {transaction.amount}</h2>
+
           <h2 className='text-center'>Payable to: {transaction.to}</h2>
+
           <h2 className='text-center'>Transaction Type: {transaction.transactionType}</h2>
+
           <br/>
-        <br/><br/>
+          <br/> 
+          <br/>
+          
           <form>
             <Fragment>
               <div className="form-group">
+
                 <label> Eneter memo for transaction :</label>
-                <textarea className="mx-auto shadow-box-example z-depth-3 block-example border border-dark form-control form-control-lg w-50" value={memo} onChange={(e) => setMemo(e.target.value)}/>
+
+                <textarea 
+                className="mx-auto shadow-box-example z-depth-3 block-example border border-dark form-control form-control-lg w-50" 
+                value={memo} 
+                onChange={(e) => setMemo(e.target.value)}
+                />
               </div>
+
               <div className="text-center">
                 <MDBBtn gradient="blue" onClick={onSubmit}>Submit</MDBBtn>
-                        </div>
+              </div>
+
             </Fragment>
-          </form>
+          </form> 
+
         </div>
-    
-          );
+      );
     }
 }
 
