@@ -3,8 +3,9 @@ import {MDBBtn} from "mdbreact"
 import '../styles/dropdown.css'
 import { connect } from "react-redux";
 import { addTransaction } from "../action/transactionAction";
+import {subBalance, addBalance } from '../action/balanceAction';
 
-const NewTranForm = ({addTransaction, history}) => {
+const NewTranForm = ({addTransaction, history,subBalance,addBalance}) => {
     const [amount, setAmount] = useState('')
     const [to, setTo] = useState('')
     const [memo, setMemo] = useState('')
@@ -17,6 +18,7 @@ const NewTranForm = ({addTransaction, history}) => {
             memo,
             transactionType
         })
+        transactionType == "deposit" ? addBalance(parseInt(amount)) : subBalance(amount) 
         history.push('/')
     }
 
@@ -83,9 +85,10 @@ const NewTranForm = ({addTransaction, history}) => {
         </div>
     )
 }
-
 const mapDispatchToProps = {
-    addTransaction
+    addTransaction,
+    subBalance,
+    addBalance
 }
 
 export default connect(undefined,mapDispatchToProps)(NewTranForm)
