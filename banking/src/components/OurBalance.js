@@ -7,7 +7,7 @@ const Balance=(props) =>(
         <MDBContainer className="container-fluid pl-0">
             <MDBRow className="text-center display-4">
                 <MDBCol size="12">BALANCE :${props.balance}</MDBCol>
-                <MDBCol className="display-4 p-5 text-center" size="12"><h4>Transactions :</h4></MDBCol>
+                <MDBCol className="p-5 text-center" size="12"><h4>Transactions :</h4></MDBCol>
             </MDBRow>
         </MDBContainer>
     </div>
