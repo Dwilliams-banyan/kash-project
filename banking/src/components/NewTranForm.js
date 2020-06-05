@@ -87,7 +87,7 @@ const NewTranForm = ({addTransaction, history,subBalance,addBalance}) => {
                     </div>
 
                     <div className="text-center">
-                        <MDBBtn onClick={onSubmit} gradient="blue">Submit</MDBBtn>
+                        <MDBBtn onClick={onSubmit} className="indigo darken-3">Submit</MDBBtn>
                     </div>
                     
                 </Fragment>

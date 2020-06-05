@@ -14,7 +14,7 @@ toggleCollapse = () => {
 render() {
   return (
 
-      <MDBNavbar color="default-color" dark expand="md">
+      <MDBNavbar color="indigo darken-3" dark expand="md">
 
         <MDBNavbarBrand>
           <strong className="white-text">Kash App</strong>

@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 const Balance=(props) =>(
     <div>
         <MDBContainer className="container-fluid pl-0">
-            <MDBRow>
+            <MDBRow className="text-center display-4">
                 <MDBCol size="12">BALANCE :${props.balance}</MDBCol>
-                <MDBCol size="12"><h4>Transactions :</h4></MDBCol>
+                <MDBCol className="display-4 p-5 text-center" size="12"><h4>Transactions :</h4></MDBCol>
             </MDBRow>
         </MDBContainer>
     </div>

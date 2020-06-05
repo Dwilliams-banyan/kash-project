@@ -24,7 +24,7 @@ const HelpPage = ()=> {
                 className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
                 >
                     <div>
-                        <h5 className="pink-text">
+                        <h5 className="green-text">
                         <MDBIcon icon="chart-pie"/> Deposit
                         </h5>
                         <MDBCardTitle tag="h3" className="pt-2">
@@ -52,7 +52,7 @@ const HelpPage = ()=> {
                 className="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4"
                 >
                     <div>
-                        <h5 className="orange-text">
+                        <h5 className="green-text">
                         <MDBIcon icon="desktop" /> Withdraw or Transfer
                         </h5>
                         <MDBCardTitle tag="h3" className="pt-2">

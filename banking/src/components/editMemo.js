@@ -23,7 +23,7 @@ const EditPage = ({transaction,history,editMemo}) => {
       return (
         <div className='text-center' >
           <div className='mx-auto' style={{width: '40%'}}>
-             <h1 className='text-center  purple darken-2 mr-5' >Edit Memo</h1>
+             <h1 className='text-center' >Edit Memo</h1>
           </div>
 
           <h2 className='text-center  '>Amount: {transaction.amount}</h2>
@@ -50,7 +50,7 @@ const EditPage = ({transaction,history,editMemo}) => {
               </div>
 
               <div className="text-center">
-                <MDBBtn gradient="blue" onClick={onSubmit}>Submit</MDBBtn>
+                <MDBBtn className="indigo darken-3" onClick={onSubmit}>Submit</MDBBtn>
               </div>
 
             </Fragment>
