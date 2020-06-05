@@ -10,16 +10,25 @@ const NewTranForm = ({addTransaction, history,subBalance,addBalance}) => {
     const [to, setTo] = useState('')
     const [memo, setMemo] = useState('')
     const [transactionType, setTransActionType] = useState('deposit')
+    const [error,setError] = useState(undefined)
 
     const onSubmit = () => {
-        addTransaction({
-            amount,
-            to,
-            memo,
-            transactionType
-        })
-        transactionType == "deposit" ? addBalance(parseInt(amount)) : subBalance(amount) 
-        history.push('/')
+        if(amount == "" || to ==""){
+            setError("Transaction was not filed please check your information")
+            console.log(error)
+        }
+        else if(error==undefined){
+            addTransaction({ 
+                amount,
+                to,
+                memo,
+                transactionType
+            })
+
+            transactionType == "deposit" ? addBalance(parseInt(amount)) : subBalance(amount)
+
+            history.push('/')
+        }
     }
 
     
@@ -28,6 +37,7 @@ const NewTranForm = ({addTransaction, history,subBalance,addBalance}) => {
             <form>
                 <Fragment>
                     <div className=" text-center">
+                        {error && <h2>{error}</h2>}
                         <label >Amount:{amount}</label>
                         <input type="text"  
                             value={amount} 
@@ -71,7 +81,7 @@ const NewTranForm = ({addTransaction, history,subBalance,addBalance}) => {
                         }>
                         {/* <option disabled value="">Type Of Transaction</option> */}
                             <option value="deposit">Deposit</option>
-                            <option value="withdraw">Withdrawer</option>
+                            <option value="withdraw">Withdrawal</option>
                             <option value="transfer">Transfer</option>
                         </select>
                     </div>

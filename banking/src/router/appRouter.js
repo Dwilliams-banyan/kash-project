@@ -7,6 +7,7 @@ import AboutUs from '../components/AboutPage'
 import EditPage from '../components/editMemo'
 import NotFoundPage from '../components/NotFoundPage'
 import Footer from '../components/Footer'
+import HelpPage from '../components/HelpPage'
 
 const AppRouter = () => (
     <BrowserRouter>
@@ -16,6 +17,7 @@ const AppRouter = () => (
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/new" component={NewTranForm} />
                 <Route path="/aboutus" component={AboutUs} />
+                <Route path='/help_page' component={HelpPage} />
                 <Route path='/edit/:id' component={EditPage} exact/>
                 <Route component={NotFoundPage} />
             </Switch>
